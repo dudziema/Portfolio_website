@@ -112,39 +112,60 @@ img {
     justify-content: center;
   }
   .nav__list {
-    margin: 0 1rem;
+    margin: 0 5rem;
   }
+
+
 }
 .nav__list a {
   display: block;
   font-size: 1.3rem;
   padding: 1rem;
 }
-.nav__list a:hover {
+.nav__list a:hover  {
   font-weight: 600;
 }
 
 /* Welcome section */
+@media (max-width: 61.25em) {
+  .section__welcome {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15rem 2rem;
+  }
+  .welcome{
+    padding:3rem;
+  }
+  .section__welcome--photo {
+    width: 80%;
+    margin:0.1rem;
+  }
+}
+@media(min-width:61.25em){
+  .section__welcome {
+    justify-content: center;
+    padding: 2rem 2rem;
+  }
+  .section__welcome--photo {
+    width: 60%;
+    margin:1rem;
+  }
+}
 
-.welcome {
-  width: 30rem;
-}
-.welcome_name {
-  width: 70rem;
-}
 .section__welcome--photo {
-  width: 46rem;
+
   height: auto;
   align-content: right;
   position: flex;
+  margin:1rem;
 }
 .section__welcome {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   width: 100%;
   height: 100vh;
-  padding: 7rem 2rem;
+
   background-color: var(--main-white);
   flex-wrap: wrap;
 }
@@ -156,13 +177,31 @@ img {
   color: var(--main-blue);
 }
 /* About me section */
-
+@media (max-width: 61.25em) {.section__about {
+  display:flex;
+  align-items: flex-start;
+}
+.icons{
+  width:20%;
+  border-radius: 8%;
+  margin:5px;
+}
+}
+  @media (min-width: 61.25em) {
+    .section__about {
+      display:flex;
+    }
+    .icons{
+      width:10%;
+      border-radius: 8%;
+      margin:15px;
+    }
+  }
 .section__about {
   height:100vh;
   padding: 7rem 2rem;
   background-color: var(--main-white);
-  display: flex;
-    text-align: left;
+  text-align: left;
 }
 
 .section__about--header{
@@ -177,6 +216,7 @@ img {
 }
 
 .my_photo{
+  margin-top:1rem;
   width:20rem;
   border-radius: 8%;
   height:20rem;
@@ -188,11 +228,7 @@ img {
 
 }
 
-.icons{
-  width:5%;
-  border-radius: 8%;
-  margin:5px;
-}
+
 .section__about--stack{
   display: flex;
   justify-content: center;
@@ -206,6 +242,7 @@ img {
   text-align: center;
   padding: 5rem 2rem;
   background: var(--main-white);
+  overflow:auto;
 }
 .section__projects--header{
   max-width: 640px;
@@ -273,7 +310,7 @@ img {
   text-align: center;
   width: 100%;
   height: 80vh;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   background: var(--main-white);
 }
 .section__header--contact > h2 {
